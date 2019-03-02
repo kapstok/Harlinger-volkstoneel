@@ -4,6 +4,12 @@ function updateContent() {
     case "#about":
       url = '/personal_site/contents/about.part.html';
       break;
+    case "#apps":
+      url = '/personal_site/contents/apps.part.html';
+      break;
+    case "#zxcvbn":
+      url = '/personal_site/contents/zxcvbn/zxcvbn.part.html';
+      break;
     default:
       url = '/personal_site/contents/default.part.html';
       break;

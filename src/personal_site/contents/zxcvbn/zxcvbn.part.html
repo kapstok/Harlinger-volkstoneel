@@ -1,14 +1,4 @@
-
-<!DOCTYPE html>
-
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Allersma - Password tester</title>
-        <link rel="stylesheet" type="text/css" href="/styles/DefaultStyle.css">
-        <script type="text/javascript" src="zxcvbn.js"></script>
-    </head>
-    <body>
+        <script type="text/javascript" src="/personal_site/contents/zxcvbn/zxcvbn.js"></script>
         <script>
             function updatepasswd() {
               var res = zxcvbn(document.getElementById("link").value);
@@ -43,12 +33,10 @@
             </p><br>
         </div>
 
-        <script>
-        // Initial code
-        var url = new URL(window.location.href);
-        var val = url.searchParams.get("zxcvbn");
-        document.getElementById("link").value = val;
-        updatepasswd();
-        </script>
-    </body>
-</html>
+<script>
+  // Initial code
+  var url = new URL(window.location.href);
+  var val = url.searchParams.get("zxcvbn");
+  document.getElementById("link").value = val;
+  updatepasswd();
+</script>

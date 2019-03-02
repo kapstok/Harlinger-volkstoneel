@@ -52,8 +52,10 @@ h3 {
 #content {
     background-color: rgba(0,0,0,0.7);
     margin: 2em auto auto auto;
+    padding: auto 1em auto 1em;
     display: block;
-    width: 60%;
+    width: 60em;
+    max-width: 80%;
     height: 40em;
     border-radius: 1em;
     border-style: none;
