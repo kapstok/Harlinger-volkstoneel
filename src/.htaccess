@@ -1,1 +1,5 @@
-DirectoryIndex /personal_site/index.html
+RewriteEngine On
+
+RewriteRule ^$ personal_site/index.html [NC]
+
+# Redirect 301 /index.html /personal_site/index.html
