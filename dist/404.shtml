@@ -1,14 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html>
 <head>
-    <title>Allersma - toegang geweigerd</title>
+    <title>Allersma - pagina niet gevonden</title>
+    <meta charset="utf-8">
+    <meta name="application-name" content="Jan Allersma">
+    <meta name="msapplication-TileColor" content="#FF6883">
+    <meta name="theme-color" content="#FF6883">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/personal_site/styles/index.css">
     <link rel="stylesheet" href="/personal_site/styles/buttons.css">
     <link rel="manifest" href="/personal_site/manifest.webmanifest">
 </head>
 <body>
-    <h1>403: Toegang geweigerd</h1>
-    <h3><i><!--#echo var="HTTP_HOST" --><!--#echo var="REQUEST_URI" --></i> kan je niet opvragen >:(</h3>
+    <h1>404: Pagina niet gevonden</h1>
+    <h3>Sorry man! <i><!--#echo var="HTTP_HOST" --><!--#echo var="REQUEST_URI" --></i> bestaat (niet) meer.</h3>
     Sheit! Breng me dan maar naar de 
     <a href="/">
         <div class="button" id="white">
@@ -17,6 +22,12 @@
     </a>
 </body>
 </html>
+
+
+
+
+
+
 
 
 

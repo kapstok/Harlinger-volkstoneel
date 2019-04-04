@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Use '/personal_site/index.html' as host root('/').
+RewriteRule ^$ personal_site/index.html [NC]
+
+# Force SSL on 'http://docs.allersma.be'.
+Redirect 301 /docs https://docs.allersma.be/
