@@ -6,10 +6,12 @@
     <meta name="msapplication-TileColor" content="#FF6883">
     <meta name="theme-color" content="#FF6883">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="popup.css" type="text/css">
 </head>
 <body onhashchange="update()">
     <center>
-        <br><br><br><br>
+        <h1>Allersma docs</h1>
+        <br><br>
         <table>
             <tr>
                 <td><a href="rsc/1">Document 1</a></td>
@@ -24,6 +26,26 @@
         </table>
         <br><br>
     </center>
+
+    <div id="1edit" class="overlay">
+    	<div class="popup">
+    		<h2>Bewerk Document</h2>
+    		<a class="close" href="#">&times;</a>
+    		<div class="content">
+    			Thank to pop me out of that button, but now i'm done so you can close this window.
+    		</div>
+    	</div>
+    </div>
+
+    <div id="2edit" class="overlay">
+      <div class="popup">
+        <h2>Bewerk Document</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>

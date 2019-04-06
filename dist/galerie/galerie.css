@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  border: 1px solid #CCC;
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.frame:hover {
+  border: 1px solid #777;
+}
+
+.frame img {
+  width: 100%;
+  /*height: auto;*/
+  padding-top: 0.2em;
+}
+
+@media only screen and (max-width: 700px) {
+  .frame {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .frame {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
