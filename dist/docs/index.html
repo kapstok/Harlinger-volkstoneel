@@ -30,9 +30,13 @@
     <div id="1edit" class="overlay">
     	<div class="popup">
     		<h2>Bewerk Document</h2>
-    		<a class="close" href="#">&times;</a>
+    		<a class="close" href="javascript:history.back()">&times;</a>
     		<div class="content">
-    			Thank to pop me out of that button, but now i'm done so you can close this window.
+    		  <textarea rows="5" cols="100" required="1" form="1form"></textarea>
+                  <form method='post' id='1form' action=''>
+                    <input type="submit" value="Submit" />
+                    <input type="button" value="Cancel" onclick="history.back()" class='sec-btn' />
+                  </form>
     		</div>
     	</div>
     </div>

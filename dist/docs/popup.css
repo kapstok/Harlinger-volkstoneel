@@ -1,3 +1,29 @@
+input[type=submit], [type=button] {
+  background-image: linear-gradient(-180deg, #34D058, #28A745 90%);
+  color: #FFF;
+  font-size: 1em;
+  height: 3em;
+  float: right;
+  border: 1px solid green;
+}
+
+input.sec-btn {
+  background-image: linear-gradient(-180deg, #D6D6D6, #B2B2B2 90%);
+  color: #000;
+  float: left;
+  border: 1px solid #B2B2B2;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+  resize: vertical;
+}
+
+textarea:invalid {
+  border: 1px solid red;
+}
+
 .box {
   width: 40%;
   margin: 0 auto;
@@ -45,7 +71,9 @@
   background: #fff;
   border-radius: 5px;
   width: 30%;
-  position: relative;
+  min-height: max-content;
+  left: relative;
+  right: relative;
   transition: all 5s ease-in-out;
 }
 
@@ -62,10 +90,10 @@
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #FFF;
 }
 .popup .close:hover {
-  color: #06D85F;
+  color: #EF8730;
 }
 .popup .content {
   max-height: 30%;
