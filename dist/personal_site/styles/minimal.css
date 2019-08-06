@@ -1,0 +1,42 @@
+@font-face {
+  font-family: PublicSans;
+  src: url('public-sans-thin.ttf');
+}
+
+body {
+  background-color: #FF6883;
+  background-image: url("../background.gif");
+  background-repeat: no-repeat;
+  background-position: center 10em;
+  background-size: 50% auto;
+}
+
+main.content {
+  max-width: 75ch;
+  padding: 2ch;
+  margin: auto;
+  font-family: PublicSans;
+  font-size: calc(0.5vw + 12px);
+  background-color: rgba(0,0,0,0.8);
+  color: #FFF;
+  text-align: left;
+  border-radius: 3pt;
+}
+
+.link {
+  color: rgb(183, 123, 27);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #FFF;
+  background-color: rgb(183, 123, 27);
+  transition: 0.3s;
+}
+
+img {
+  display: flex;
+  width: 37em;
+  height: auto;
+}

@@ -2,40 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="application-name" content="Jan Allersma">
-    <meta name="msapplication-TileColor" content="#FF6883">
-    <meta name="theme-color" content="#FF6883">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jan Allersma</title>
-    <link rel="stylesheet" href="/personal_site/styles/index.css">
-    <link rel="stylesheet" href="/personal_site/styles/buttons.css">
-    <link rel="manifest" href="/personal_site/manifest.webmanifest">
+    <title>Allersma - Homepage</title>
+    <link rel="stylesheet" href="styles/minimal.css">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body onhashchange="updateContent()">
-    <script src="/personal_site/index.js" type="text/javascript"></script>
-    <div class="header">
-      <h1>Jan Allersma</h1>
-      <h3>Computer gozer</h3>
-    </div>
-    <div id="content">
-    </div>
-    <div id="footer">
-      <a href="#hello">
-        <div class="button" id="green">
-          Hallo!
-        </div>
-      </a>
-      <a href="#about">
-        <div class="button" id="blue">
-          Over mij
-        </div>
-      </a>
-      <a href="#apps">
-        <div class="button" id="red">
-          Apps
-        </div>
-      </a>
-    </div>
-    <script>updateContent();</script>
-  </body>
+  <body>
+    <main class="content">
+      <h3>Welkom!</h3>
+      <p>
+        Welkom op de website <i>allersma.be</i>. Mijn naam is Jan Allersma.
+        Voor informatie over mij kan je naar mijn
+        <a class="link" href="https://linkedin.com">LinkedIn</a>,
+        <a class="link" href="https://pagure.io/user/kapstok">Pagure</a>
+        of
+        <a class="link" href="https://github.com">Github</a>
+        profiel kijken.
+      </p>
+
+      <p>
+        Openbare bestanden van deze website zijn te vinden in
+        <a class="link" href="/pc">deze directory</a>.
+      </p>
+
+      <h3>Mijn visie</h3>
+      <p>
+        Tijdens het volgen van de opleiding Informatica heb ik gemerkt dat veel
+        programmeurs in de frontend wereld de neiging hebben om (teveel)
+        gebruik te maken van veel verschillende frameworks. Het gebruik van al
+        deze frameworks lijdt tot een abstractielaag van het ene framework op
+        een abstractielaag van het andere framework. Het gevolg: een website
+        wordt onnodig complex. Ik ben geen purist als het gaat om het gebruik
+        van frameworks, maar het is als programmeur belangrijk om kritisch te
+        blijven en zorgvuldig te kiezen welke frameworks nodig zijn 'to get
+        the job done'. Voor deze eenvoudige site is slechts gebruik gemaakt van
+        HTML/CSS/JS.
+        <!--... VOORBEELDEN NOEMEN-->
+        zijn enkele voorbeelden van de kracht van alleen de drie talen.
+      </p>
+    </main>
 </html>
