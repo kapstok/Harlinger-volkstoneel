@@ -1,0 +1,60 @@
+textarea {
+  border-style: dashed;
+  border-color: #777;
+  background: transparent;
+  font-family: inherit;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: .5rem;
+  width: 40rem;
+  max-width: 80%;
+  min-height: 20rem;
+}
+
+article {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+article > section > header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+article > section > header /*> h2 + p*/ {
+  font-style: italic;
+  font-size: larger;
+/*  font-family: initial; */
+}
+
+article > section > header > h2 + p::before,
+article > section > header > h2 + p::after {
+  content: ''; /* Must ALWAYS be set */
+  display: block;
+  width: 10rem;
+  margin: 1rem auto;
+  border: solid;
+  border-width: thin 0 0;
+}
+
+/*
+article > section > p:first-of-type::first-letter{
+  font-size: 3.55em;
+  font-weight: 400;
+  color: #FF3A5C;
+}
+*/
+
+article > section > details.oplossing {
+  background: #BBB;
+  border-radius: 3px;
+  max-width: 43rem;
+  margin: 1rem auto;
+  padding: .5rem 2rem;
+}
+
+article > section > details.oplossing > p {
+  padding: .3rem 2rem;
+  color: #444;
+}

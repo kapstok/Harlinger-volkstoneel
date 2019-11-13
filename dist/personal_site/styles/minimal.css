@@ -42,7 +42,7 @@ body {
   background-attachment: fixed;
 }
 
-img {
+div.panel > img {
   width: 15em;
   height: 15em;
   margin-top: -7.5em;
