@@ -4,41 +4,45 @@
 }
 
 h1 {
-    font-family: arial, helvetica, freesans;
-    font-size: 45pt;
-    font-weight: bold;
-    margin-bottom: 0.3em;
-    color: #FFF;
-    text-align: center;
-    text-shadow:
-        -1px 1px 0 #ddd,
-        -2px 2px 0 #c8c8c8,
-        -3px 3px 0 #ccc,
-        -4px 4px 0 #b8b8b8,
-        -4px 4px 0 #bbb,
-        0px 1px 1px rgba(0,0,0,.4),
-        0px 2px 2px rgba(0,0,0,.3),
-        -1px 3px 3px rgba(0,0,0,.2),
-        -1px 5px 5px rgba(0,0,0,.1),
-        -2px 8px 8px rgba(0,0,0,.1),
-        -2px 13px 13px rgba(0,0,0,.1);
+  font-family: arial, helvetica, freesans;
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  color: #444;
+  text-align: center;
+  /*text-shadow:
+    -1px 1px 0 #ddd,
+    -2px 2px 0 #c8c8c8,
+    -3px 3px 0 #ccc,
+    -4px 4px 0 #b8b8b8,
+    -4px 4px 0 #bbb,
+    0px 1px 1px rgba(0,0,0,.4),
+    0px 2px 2px rgba(0,0,0,.3),
+    -1px 3px 3px rgba(0,0,0,.2),
+    -1px 5px 5px rgba(0,0,0,.1),
+    -2px 8px 8px rgba(0,0,0,.1),
+    -2px 13px 13px rgba(0,0,0,.1);*/
+}
+
+section.content > h2 {
+  text-align: center;
 }
 
 h4 {
-    font-family: arial, helvetica, freesans;
-    font-size: 14pt;
-    font-style: oblique;
-    margin: 0.1em 0;
-    color: #FFF;
-    text-align: center;
+  font-family: arial, helvetica, freesans;
+/*  font-size: 14pt;*/
+  font-style: oblique;
+  margin: 0.1em 0;
+  color: #444;
+  text-align: center;
 }
 
 body {
-  background-color: #FF6883;
-  background-image: url("../background.gif");
+  background-color: antiquewhite;
+  background-image: url("../picture.png");
   background-repeat: no-repeat;
-  background-position: 55% -0.8em;
-  background-size: 50% auto;
+  background-position: 50% 9rem;
+  background-size: 24rem 35rem; /* 20vw 30vw; */
   background-attachment: fixed;
 }
 
@@ -46,6 +50,15 @@ div.panel > img {
   width: 15em;
   height: 15em;
   margin-top: -7.5em;
+}
+
+img#logo {
+  max-width: 50%;
+  max-height: 80%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
 }
 
 a {
@@ -60,28 +73,9 @@ a:hover {
   transition: 0.3s;
 }
 
-.panel {
-  background: linear-gradient(#FF8FA3, #D0546A);
-  width: 30rem;
-  height: 30rem;
-  display: inline-block;
-  margin: 10em 4em auto 4em;
-}
-
-.panel > p {
-  margin-left: 20pt;
-  color: #FFF;
-  font-family: PublicSans;
-  font-weight: bolder;
-  font-size: larger;
-  float: left;
-  text-align: left;
-  text-shadow: 2px 2px #777;
-}
-
 section.content {
   background: #FFD3DB;
-  margin-top: 4em;
+  margin-top: 38rem;
   padding: 2em 20pt 20pt 20pt;
   filter:
     drop-shadow(0 -1em 3em rgba(0,0,0,0.2))
