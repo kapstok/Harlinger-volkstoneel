@@ -17,19 +17,17 @@ article {
   margin: 0 auto;
 }
 
-article > section > header {
+section > header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-article > section > header /*> h2 + p*/ {
-  font-style: italic;
+section > header > p {
   font-size: larger;
-/*  font-family: initial; */
 }
 
-article > section > header > h2 + p::before,
-article > section > header > h2 + p::after {
+section > header > h2 + p::before,
+section > header > h2 + p::after {
   content: ''; /* Must ALWAYS be set */
   display: block;
   width: 10rem;
@@ -37,14 +35,6 @@ article > section > header > h2 + p::after {
   border: solid;
   border-width: thin 0 0;
 }
-
-/*
-article > section > p:first-of-type::first-letter{
-  font-size: 3.55em;
-  font-weight: 400;
-  color: #FF3A5C;
-}
-*/
 
 article > section > details.oplossing {
   background: #BBB;

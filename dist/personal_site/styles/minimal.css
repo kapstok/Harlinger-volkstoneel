@@ -10,18 +10,6 @@ h1 {
   margin-bottom: 0.3em;
   color: #444;
   text-align: center;
-  /*text-shadow:
-    -1px 1px 0 #ddd,
-    -2px 2px 0 #c8c8c8,
-    -3px 3px 0 #ccc,
-    -4px 4px 0 #b8b8b8,
-    -4px 4px 0 #bbb,
-    0px 1px 1px rgba(0,0,0,.4),
-    0px 2px 2px rgba(0,0,0,.3),
-    -1px 3px 3px rgba(0,0,0,.2),
-    -1px 5px 5px rgba(0,0,0,.1),
-    -2px 8px 8px rgba(0,0,0,.1),
-    -2px 13px 13px rgba(0,0,0,.1);*/
 }
 
 section.content > h2 {
@@ -30,7 +18,6 @@ section.content > h2 {
 
 h4 {
   font-family: arial, helvetica, freesans;
-/*  font-size: 14pt;*/
   font-style: oblique;
   margin: 0.1em 0;
   color: #444;
@@ -39,7 +26,6 @@ h4 {
 
 body {
   background-color: antiquewhite;
-  background-image: url("../picture.png");
   background-repeat: no-repeat;
   background-position: 50% 9rem;
   background-size: 24rem 35rem; /* 20vw 30vw; */
@@ -50,15 +36,6 @@ div.panel > img {
   width: 15em;
   height: 15em;
   margin-top: -7.5em;
-}
-
-img#logo {
-  max-width: 50%;
-  max-height: 80%;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
 }
 
 a {
@@ -75,10 +52,9 @@ a:hover {
 
 section.content {
   background: #FFD3DB;
-  margin-top: 38rem;
+  margin: 3rem 1rem 3rem 1rem;
   padding: 2em 20pt 20pt 20pt;
   filter:
-    drop-shadow(0 -1em 3em rgba(0,0,0,0.2))
     drop-shadow(0.2em 0.2em 0.2em rgba(0,0,0,0.4));
 
   font-family: PublicSans;
