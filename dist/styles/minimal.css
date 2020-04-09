@@ -55,6 +55,10 @@ span.subtle {
   font-style: italic;
 }
 
+section > img {
+  max-width: 95%;
+}
+
 section.content {
   background: #FFD3DB;
   margin: 3rem 1rem 3rem 1rem;
