@@ -3,33 +3,52 @@
   src: url('public-sans-thin.ttf');
 }
 
-h1 {
-  font-family: arial, helvetica, freesans;
-  font-size: 3.6rem;
-  font-weight: bold;
-  margin-bottom: 0.3em;
-  color: #444;
-  text-align: center;
+@font-face {
+  font-family: LobsterTwo;
+  src: url('LobsterTwo-Regular.ttf');
 }
 
-section.content > h2 {
+@font-face {
+  font-family: Lemonada;
+  src: url('Lemonada-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Galada;
+  src: url('Galada-Regular.ttf');
+}
+
+@font-face {
+  font-family: Yeseva;
+  src: url('YesevaOne-Regular.ttf');
+}
+
+h1 {
+  font-family: LobsterTwo;
+  font-size: 9rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  color: #FFF;
   text-align: center;
+  /*-webkit-text-stroke: #555 1px;*/
 }
 
 h4 {
-  font-family: arial, helvetica, freesans;
+  font-family: LobsterTwo;
+  font-size: 4rem;
   font-style: oblique;
   margin: 0.1em 0;
-  color: #444;
+  color: #FFF;
   text-align: center;
+  /*-webkit-text-stroke: #555 1px;*/
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: turquoise;
   background-repeat: no-repeat;
-  background-position: 50% 9rem;
-  background-size: 24rem 35rem; /* 20vw 30vw; */
+  background-size: 100% auto;
   background-attachment: fixed;
+  background-image: url('background4.jpg');
 }
 
 div.panel > img {
@@ -60,14 +79,15 @@ section > img {
 }
 
 section.content {
-  background: #FFD3DB;
-  margin: 3rem 1rem 3rem 1rem;
+  overflow: hidden;
+  background: /*#FFD3DB;*/ rgba(0,0,0,0.8);
+  margin: 14rem -1rem -1rem -1rem;
   padding: 2em 20pt 20pt 20pt;
   filter:
     drop-shadow(0.2em 0.2em 0.2em rgba(0,0,0,0.4));
 
   font-family: PublicSans;
-  color: #444;
+  color: #FFF;
 }
 
 section.panels {
