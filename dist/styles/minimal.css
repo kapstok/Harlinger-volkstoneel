@@ -51,6 +51,10 @@ body {
   background-image: url('background4.jpg');
 }
 
+summary {
+  cursor: pointer;
+}
+
 div.panel > img {
   width: 15em;
   height: 15em;

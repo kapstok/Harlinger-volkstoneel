@@ -1,0 +1,20 @@
+/* For non-iOS devices */
+@supports not (-webkit-overflow-scrolling: touch) {
+  .ios {
+    display: none;
+  }
+}
+
+/* Replacement background for iOS devices */
+div.background {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: url('background4.jpg');
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
