@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Allersma - Mailen met eigen domein</title>
+    <link rel="stylesheet" href="styles/minimal.css">
+    <link rel="stylesheet" href="styles/newspaper.css">
+  </head>
+  <body>
+  <h1>Jan Allersma</h1>
+  <h4>Computer gozer</h4>
+    <section class="content">
+      <article>
+        <section>
+          <header>
+            <h2>Doorsturen van mails via eigen domein op Fedora 34</h2>
+            <p>Het doorsturen van mails</p>
+          </header>
+
+        <p>
+          <span class="subtle">
+            Bij alle codeblokken op deze pagina wordt uitgegaan van uitvoering als root/superuser.<br>
+            Voor het bewerken van tekst wordt <i>nano</i> gebruikt, maar je kunt natuurlijk een
+            andere editor gebruiken.<br><br>
+          </span>
+
+          Nadat je op <a target="_blank" rel="noreferrer noopener" href="https://console.hetzner.cloud/">Hetzner</a>
+          een nieuwe VPS hebt aangemaakt, moeten eerst alle dependencies op orde zijn:<br><br>
+          
+          <code>
+            dnf update<br>
+            dnf install httpd postfix<br><br>
+            
+            # Extra dependencies voor het gemak:<br>
+            dnf install nano telnet<br><br>
+          </code>
+          
+          Zorg dat na het opnieuw opstarten van de server voortaan de services die nodig zijn standaard mee
+          opstarten:<br><br>
+          
+          <code>
+            systemctl enable httpd<br>
+            systemctl enable postfix<br><br>
+          </code>
+          
+          Om te weten of de server werkt, kan je wat tekst invoeren in <i>/var/www/html/index.html</i> en nadat
+          de server opnieuw is opgestart, de website bezoeken.<br><br>
+          
+          De volgende stap is om <i>/etc/postfix/main.cf</i> te bewerken. Voeg deze regels toe:<br><br>
+          
+          <code>
+            inet_interfaces = all<br>
+            mydestination = $myhostname, localhost.$mydomain, localhost<br><br>
+
+            # Custom config<br>
+            virtual_alias_domains = test.allersma.be<br>
+            virtual_alias_maps = hash:/etc/postfix/virtual<br><br>
+          </code>
+          
+          En haal <code>inet_interfaces = localhost</code> weg.<br><br>
+          
+          <span class="subtle">
+            In dit voorbeeld wordt <i>test.allersma.be</i> als domein gebruikt waar mail voortaan heen gestuurd
+            wordt, d.w.z. je eigen domein.<br><br>
+          </span>
+          
+          Vervolgens kan in <i>/etc/postfix/virtual</i> deze tekst worden toegevoegd:<br><br>
+          
+          <code>
+            test@test.allersma.be jouw-eigen-mail@gmail.com<br><br>
+          </code>
+          
+          Waarbij <i>test@test.allersma.be</i> het mailadres is waar mails op ontvangen moeten worden en
+          <i>jouw-eigen-mail@gmail.com</i> het mailadres is waar de mails naartoe gestuurd moeten worden.<br><br>
+          
+          Ten slotte kan de server opnieuw opgestart worden met het commando <code>init 6</code> om de
+          wijzigingen van kracht te laten zijn.
+        </p>
+        </section>
+      </article>
+      
+      <article>
+        <section>
+          <header>
+            <h2>DNS instellen</h2>
+          </header>
+          
+          <p>
+            Wat betreft DNS instellingen hoeft alleen een <i>A-record</i> aangemaakt te worden:<br><br>
+            
+            <code>
+              <b>Naam &ensp; Type &ensp; Content &ensp; TTL</b><br>
+              test &ensp; A &emsp;&emsp;&emsp;&emsp; IP-adres &ensp; 8h<br>
+            </code>
+          </p>
+        </section>
+      </article>
+    </section>
+</body></html>
+
