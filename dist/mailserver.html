@@ -73,6 +73,12 @@
           Waarbij <i>test@test.allersma.be</i> het mailadres is waar mails op ontvangen moeten worden en
           <i>jouw-eigen-mail@gmail.com</i> het mailadres is waar de mails naartoe gestuurd moeten worden.<br><br>
           
+          <code>
+            postmap /etc/postfix/virtual<br><br>
+          </code>
+          
+          Moet uitgevoerd worden zodat er een database aangemaakt/geupdate wordt die door postfix wordt ingelezen.<br><br>
+          
           Ten slotte kan de server opnieuw opgestart worden met het commando <code>init 6</code> om de
           wijzigingen van kracht te laten zijn.
         </p>
