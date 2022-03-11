@@ -80,7 +80,10 @@
           Moet uitgevoerd worden zodat er een database aangemaakt/geupdate wordt die door postfix wordt ingelezen.<br><br>
           
           Ten slotte kan de server opnieuw opgestart worden met het commando <code>init 6</code> om de
-          wijzigingen van kracht te laten zijn.
+          wijzigingen van kracht te laten zijn.<br><br>
+
+          <span class='highlight'>Elke keer dat je het bestand wijzigt</span> moet je dus <i>postmap /etc/postfix/virtual</i>
+          en <i>init 6</i> of eventueel <i>service postfix reload</i> uitvoeren.
         </p>
         </section>
       </article>
@@ -97,6 +100,50 @@
             <code>
               <b>Naam &ensp; Type &ensp; Content &ensp; TTL</b><br>
               test &ensp; A &emsp;&emsp;&emsp;&emsp; IP-adres &ensp; 8h<br>
+            </code>
+          </p>
+        </section>
+      </article>
+
+      <article>
+        <section>
+          <header>
+            <h2>Een mailadres/domein blokkeren</h2>
+          </header>
+
+          <p>
+            Het doorsturen van mails is nu mogelijk. De volgende stap is om bepaalde mailadressen of domeinen te blokkeren.
+
+            Dit kan gedaan worden door allereerst in <i>/etc/postfix/main.cf</i> deze regel toe te voegen:<br><br>
+
+            <code>
+              smtpd_recipient_restrictions = check_sender_access hash:/etc/postfix/access,...<br><br>
+            </code>
+
+            Daarna kan in <i>/etc/postfix/access</i> regels toegevoegd worden om bepaalde adressen/domeinen te blokkeren:
+            <br><br>
+
+            <code>
+              # Hierbij krijgt de zender een 550 terug met het bericht 'Blacklisted'<br>
+              test@example.com      550 Blacklisted<br><br>
+
+              # Het is ook mogelijk om REJECT te gebruiken, waardoor de zender een 554 terug krijgt met het bericht<br>
+              # 'Access denied'<br>
+              test@example.com      REJECT<br><br>
+
+              # Alle mails van het domein 'example.com' kunnen ook geblokkeerd worden:<br>
+              example.com           REJECT<br><br>
+
+              # Of alle gebruikers die beginnen met 'test' worden tegengehouden:<br>
+              test@                 REJECT<br><br>
+            </code>
+
+            Ten slotte moet <span class='highlight'>elke keer als het blacklisted bestand gewijzigd wordt</span> deze
+            commando's in Bash uitgevoerd worden:<br><br>
+
+            <code>
+              postmap /etc/postfix/access<br>
+              service postfix reload
             </code>
           </p>
         </section>
