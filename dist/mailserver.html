@@ -112,12 +112,18 @@
           </header>
 
           <p>
+            <span class='subtle'>
+              Dit is alleen een blokkade op <i>MAIL FROM</i> wat binnenkomt en kan dus <span class='highlight'>niet als beveiligingsmaatregel</span>
+              beschouwd worden.
+            </span><br><br>
             Het doorsturen van mails is nu mogelijk. De volgende stap is om bepaalde mailadressen of domeinen te blokkeren.
 
-            Dit kan gedaan worden door allereerst in <i>/etc/postfix/main.cf</i> deze regel toe te voegen:<br><br>
+            Dit kan gedaan worden door allereerst in <i>/etc/postfix/main.cf</i> deze regels toe te voegen:<br><br>
 
             <code>
-              smtpd_recipient_restrictions = check_sender_access hash:/etc/postfix/access,...<br><br>
+              smtpd_recipient_restrictions =<br>
+                      &emsp;&emsp;&emsp;check_sender_access hash:/etc/postfix/access<br>
+                      &emsp;&emsp;&emsp;permit<br><br>
             </code>
 
             Daarna kan in <i>/etc/postfix/access</i> regels toegevoegd worden om bepaalde adressen/domeinen te blokkeren:
