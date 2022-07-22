@@ -91,13 +91,14 @@ section > img {
 section.content {
   overflow: hidden;
   background: /*#FFD3DB;*/ rgba(0,0,0,0.8);
-  margin: 14rem -1rem -1rem -1rem;
+  margin: 14rem 10rem 0rem 10rem;
   padding: 2em 20pt 20pt 20pt;
   filter:
     drop-shadow(0.2em 0.2em 0.2em rgba(0,0,0,0.4));
 
   font-family: PublicSans;
   color: #FFF;
+  border-radius: 1rem;
 }
 
 section.panels {
