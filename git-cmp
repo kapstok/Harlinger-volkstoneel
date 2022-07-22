@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo 'What is the original ref?'
-read source
-
-echo 'What is the newer ref?'
-read dest
-
-git log $dest..$source --pretty=format:"%C(blue bold) %h %Creset%C(cyan) %ad %Cblue %an %C(cyan) %s %Creset" --date=short
