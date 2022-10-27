@@ -48,7 +48,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;
-  background-image: url('noorderhaven.jpg');
+  background-image: url('anna-casparii.jpg');
 }
 
 summary {
@@ -65,12 +65,6 @@ a {
   color: #FF3A5C;
   font-weight: bolder;
   text-decoration: none;
-}
-
-a:hover {
-  color: #444;
-  background-color: #FE0E38;
-  transition: 0.3s;
 }
 
 span.subtle {
@@ -91,7 +85,9 @@ section > img {
 section.content {
   overflow: hidden;
   background: /*#FFD3DB;*/ rgba(0,0,0,0.8);
-  margin: 14rem 10rem 0rem 10rem;
+  margin: auto;
+  border-radius: 3px;
+  width: 80%;
   padding: 2em 20pt 20pt 20pt;
   filter:
     drop-shadow(0.2em 0.2em 0.2em rgba(0,0,0,0.4));
