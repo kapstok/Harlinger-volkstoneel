@@ -48,7 +48,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;
-  background-image: url('anna-casparii.jpg');
+  background-image: url('/img/anna-casparii.jpg');
 }
 
 summary {
@@ -62,7 +62,7 @@ div.panel > img {
 }
 
 a {
-  color: #FF3A5C;
+  color: #f2c744;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -100,6 +100,12 @@ section.content {
 section.panels {
   margin-top: 20%;
   text-align: center;
+}
+
+img.header {
+  width: 42vw;
+  display: block;
+  margin: auto;
 }
 
 @keyframes glow {
