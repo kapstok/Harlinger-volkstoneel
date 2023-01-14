@@ -55,6 +55,10 @@ summary {
   cursor: pointer;
 }
 
+hr {
+  border: .1px solid #cecece;
+}
+
 div.panel > img {
   width: 15em;
   height: 15em;
