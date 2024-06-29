@@ -83,6 +83,7 @@ span.highlight {
 }
 
 section > img {
+  max-height: 113vh;
   max-width: 95%;
 }
 
